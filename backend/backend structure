@@ -1,0 +1,79 @@
+backend/
+│
+├── app/
+│   │
+│   ├── api/
+│   │   ├── auth.py
+│   │   ├── complaints.py
+│   │   ├── evidence.py
+│   │   ├── notifications.py
+│   │   ├── escalations.py
+│   │   ├── crowd_validation.py
+│   │   ├── verification.py
+│   │   ├── ai.py
+│   │   └── dashboard.py
+│   │
+│   ├── models/
+│   │   ├── department.py
+│   │   ├── user.py
+│   │   ├── complaint.py
+│   │   ├── ai_analysis.py
+│   │   ├── evidence.py
+│   │   ├── complaint_history.py
+│   │   ├── escalation.py
+│   │   ├── notification.py
+│   │   ├── notification_log.py
+│   │   ├── crowd_validation.py
+│   │   ├── student_verification.py
+│   │   └── sla_rule.py
+│   │
+│   ├── schemas/
+│   │   ├── auth.py
+│   │   ├── complaint.py
+│   │   ├── ai.py
+│   │   ├── notification.py
+│   │   └── dashboard.py
+│   │
+│   ├── services/
+│   │   ├── auth_service.py
+│   │   ├── complaint_service.py
+│   │   ├── categorization_service.py
+│   │   ├── routing_service.py
+│   │   ├── severity_service.py
+│   │   ├── sentiment_service.py
+│   │   ├── escalation_service.py
+│   │   ├── notification_service.py
+│   │   ├── email_service.py
+│   │   ├── verification_service.py
+│   │   └── analytics_service.py
+│   │
+│   ├── ml/
+│   │   ├── keyword_rules.py
+│   │   ├── severity_rules.py
+│   │   └── sentiment_model.py
+│   │
+│   ├── database/
+│   │   ├── database.py
+│   │   ├── base.py
+│   │   └── session.py
+│   │
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── security.py
+│   │   ├── jwt_handler.py
+│   │   └── permissions.py
+│   │
+│   ├── middleware/
+│   │   ├── auth_middleware.py
+│   │   └── logging_middleware.py
+│   │
+│   ├── uploads/
+│   │   ├── images/
+│   │   ├── videos/
+│   │   ├── pdfs/
+│   │   └── audio/
+│   │
+│   └── main.py
+│
+├── requirements.txt
+└── .env

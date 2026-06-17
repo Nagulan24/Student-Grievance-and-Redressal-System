@@ -1,0 +1,188 @@
+student-grievance-ecosystem/
+│
+├── frontend/
+│   │
+│   ├── public/
+│   │
+│   └── src/
+│       │
+│       ├── assets/
+│       │   ├── images/
+│       │   ├── icons/
+│       │   └── logos/
+│       │
+│       ├── components/
+│       │   ├── common/
+│       │   │   ├── Navbar.jsx
+│       │   │   ├── Sidebar.jsx
+│       │   │   ├── Footer.jsx
+│       │   │   ├── Loader.jsx
+│       │   │   └── Modal.jsx
+│       │   │
+│       │   ├── complaint/
+│       │   │   ├── ComplaintForm.jsx
+│       │   │   ├── ComplaintCard.jsx
+│       │   │   ├── ComplaintTimeline.jsx
+│       │   │   └── EvidenceUploader.jsx
+│       │   │
+│       │   ├── dashboard/
+│       │   │   ├── StatisticsCard.jsx
+│       │   │   ├── AnalyticsChart.jsx
+│       │   │   └── HeatMap.jsx
+│       │   │
+│       │   └── notification/
+│       │       ├── NotificationCard.jsx
+│       │       └── NotificationList.jsx
+│       │
+│       ├── pages/
+│       │   │
+│       │   ├── auth/
+│       │   │   ├── Login.jsx
+│       │   │   └── ForgotPassword.jsx
+│       │   │
+│       │   ├── student/
+│       │   │   ├── Dashboard.jsx
+│       │   │   ├── SubmitComplaint.jsx
+│       │   │   ├── MyComplaints.jsx
+│       │   │   ├── ComplaintDetails.jsx
+│       │   │   ├── Notifications.jsx
+│       │   │   └── Profile.jsx
+│       │   │
+│       │   ├── grievance/
+│       │   │   ├── Dashboard.jsx
+│       │   │   ├── Complaints.jsx
+│       │   │   ├── AssignComplaint.jsx
+│       │   │   ├── Escalations.jsx
+│       │   │   └── Reports.jsx
+│       │   │
+│       │   ├── authority/
+│       │   │   ├── Dashboard.jsx
+│       │   │   ├── AssignedComplaints.jsx
+│       │   │   ├── ComplaintDetails.jsx
+│       │   │   ├── EscalatedComplaints.jsx
+│       │   │   └── UpdateStatus.jsx
+│       │   │
+│       │   └── principal/
+│       │       ├── Dashboard.jsx
+│       │       ├── Analytics.jsx
+│       │       ├── CriticalComplaints.jsx
+│       │       └── HeatMap.jsx
+│       │
+│       ├── services/
+│       │   ├── authService.js
+│       │   ├── complaintService.js
+│       │   ├── dashboardService.js
+│       │   └── notificationService.js
+│       │
+│       ├── routes/
+│       │   ├── AppRoutes.jsx
+│       │   ├── PrivateRoute.jsx
+│       │   └── RoleProtectedRoute.jsx
+│       │
+│       ├── context/
+│       │   ├── AuthContext.jsx
+│       │   └── NotificationContext.jsx
+│       │
+│       ├── utils/
+│       │   ├── constants.js
+│       │   ├── helpers.js
+│       │   └── rolePermissions.js
+│       │
+│       ├── App.jsx
+│       └── main.jsx
+│
+├── backend/
+│   │
+│   ├── app/
+│   │   │
+│   │   ├── api/
+│   │   │   ├── auth.py
+│   │   │   ├── complaints.py
+│   │   │   ├── evidence.py
+│   │   │   ├── notifications.py
+│   │   │   ├── escalations.py
+│   │   │   ├── crowd_validation.py
+│   │   │   ├── verification.py
+│   │   │   ├── ai.py
+│   │   │   └── dashboard.py
+│   │   │
+│   │   ├── models/
+│   │   │   ├── department.py
+│   │   │   ├── user.py
+│   │   │   ├── complaint.py
+│   │   │   ├── ai_analysis.py
+│   │   │   ├── evidence.py
+│   │   │   ├── complaint_history.py
+│   │   │   ├── escalation.py
+│   │   │   ├── notification.py
+│   │   │   ├── notification_log.py
+│   │   │   ├── crowd_validation.py
+│   │   │   ├── student_verification.py
+│   │   │   └── sla_rule.py
+│   │   │
+│   │   ├── schemas/
+│   │   │   ├── auth.py
+│   │   │   ├── complaint.py
+│   │   │   ├── ai.py
+│   │   │   ├── dashboard.py
+│   │   │   └── notification.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── auth_service.py
+│   │   │   ├── complaint_service.py
+│   │   │   ├── categorization_service.py
+│   │   │   ├── routing_service.py
+│   │   │   ├── severity_service.py
+│   │   │   ├── sentiment_service.py
+│   │   │   ├── escalation_service.py
+│   │   │   ├── notification_service.py
+│   │   │   ├── email_service.py
+│   │   │   ├── verification_service.py
+│   │   │   └── analytics_service.py
+│   │   │
+│   │   ├── ml/
+│   │   │   ├── keyword_rules.py
+│   │   │   ├── severity_rules.py
+│   │   │   └── sentiment_model.py
+│   │   │
+│   │   ├── database/
+│   │   │   ├── database.py
+│   │   │   ├── base.py
+│   │   │   └── session.py
+│   │   │
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   ├── security.py
+│   │   │   ├── jwt_handler.py
+│   │   │   └── permissions.py
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── auth_middleware.py
+│   │   │   └── logging_middleware.py
+│   │   │
+│   │   ├── uploads/
+│   │   │   ├── images/
+│   │   │   ├── videos/
+│   │   │   ├── pdfs/
+│   │   │   └── audio/
+│   │   │
+│   │   └── main.py
+│   │
+│   ├── requirements.txt
+│   └── .env
+│
+├── database/
+│   ├── schema.sql
+│   ├── seed_departments.sql
+│   └── seed_sla_rules.sql
+│
+├── docs/
+│   ├── SRS.pdf
+│   ├── ER_Diagram.png
+│   ├── Architecture_Diagram.png
+│   ├── API_Documentation.pdf
+│   └── User_Manual.pdf
+│
+├── .gitignore
+├── README.md
+└── docker-compose.yml
