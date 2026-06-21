@@ -1,3 +1,16 @@
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
+
+from app.models.department import Department
+from app.models.user import User
+from app.models.complaint import Complaint
+from app.models.ai_analysis import AIAnalysis
+from app.models.evidence import Evidence
+from app.models.complaint_history import ComplaintHistory
+from app.models.escalation import Escalation
+from app.models.notification import Notification
+from app.models.notification_log import NotificationLog
+from app.models.crowd_validation import CrowdValidation
+from app.models.student_verification import StudentVerification
+from app.models.sla_rule import SLARule
