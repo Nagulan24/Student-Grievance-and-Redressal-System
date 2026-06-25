@@ -44,7 +44,8 @@ class Escalation(Base):
     )
 
     escalation_reason = Column(
-        Text
+        Text,
+        nullable=True
     )
 
     escalated_by = Column(
@@ -55,5 +56,6 @@ class Escalation(Base):
 
     escalated_at = Column(
         TIMESTAMP,
+        nullable=False,
         server_default=text("CURRENT_TIMESTAMP")
     )
