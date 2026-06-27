@@ -42,6 +42,17 @@ SMTP_EMAIL = os.getenv("SMTP_EMAIL")
 
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 
+# ==========================
+# RESEND CONFIGURATION
+# ==========================
+
+RESEND_API_KEY = os.getenv(
+    "RESEND_API_KEY"
+)
+
+EMAIL_FROM = os.getenv(
+    "EMAIL_FROM"
+)
 
 # ==========================
 # APPLICATION CONFIGURATION

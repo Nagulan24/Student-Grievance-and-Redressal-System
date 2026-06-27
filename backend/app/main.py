@@ -14,6 +14,22 @@ from app.api.history import (
     router as history_router
 )
 
+from app.api.sla import (
+    router as sla_router
+)
+
+from app.api.dashboard import (
+    router as dashboard_router
+)
+
+from app.api.notification import (
+    router as notification_router
+)
+
+from app.api.dashboard import (
+    router as dashboard_router
+)
+
 app = FastAPI(
     title=APP_NAME,
     version="1.0.0",
@@ -28,6 +44,22 @@ app.include_router(
 
 app.include_router(
     history_router
+)
+
+app.include_router(
+    sla_router
+)
+
+app.include_router(
+    dashboard_router
+)
+
+app.include_router(
+    notification_router
+)
+
+app.include_router(
+    dashboard_router
 )
 
 @app.get("/")

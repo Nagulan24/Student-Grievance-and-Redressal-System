@@ -135,6 +135,64 @@ class Complaint(Base):
         server_default=text("CURRENT_TIMESTAMP")
     )
 
+    # =====================================================
+    # SLA MANAGEMENT
+    # =====================================================
+
+    sla_deadline = Column(
+        TIMESTAMP,
+        nullable=True
+    )
+
+    sla_status = Column(
+        Enum(
+            "ON_TIME",
+            "WARNING",
+            "OVERDUE",
+            "COMPLETED",
+            name="sla_status_enum"
+        ),
+        default="ON_TIME",
+        nullable=False
+    )
+
+
+    # =====================================================
+    # RESPONSE TRACKING
+    # =====================================================
+
+    first_response_at = Column(
+        TIMESTAMP,
+        nullable=True
+    )
+
+    resolved_at = Column(
+        TIMESTAMP,
+        nullable=True
+    )
+
+    closed_at = Column(
+        TIMESTAMP,
+        nullable=True
+    )
+
+
+    # =====================================================
+    # TIME METRICS
+    # =====================================================
+
+    response_time = Column(
+        Integer,
+        nullable=True,
+        comment="Minutes until first response"
+    )
+
+    resolution_time = Column(
+        Integer,
+        nullable=True,
+        comment="Minutes until complaint resolved"
+    )
+
     updated_at = Column(
         TIMESTAMP,
         server_default=text("CURRENT_TIMESTAMP"),

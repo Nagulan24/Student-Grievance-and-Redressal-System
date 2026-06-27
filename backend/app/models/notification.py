@@ -31,18 +31,21 @@ class Notification(Base):
 
     complaint_id = Column(
         Integer,
-        ForeignKey("complaints.complaint_id")
+        ForeignKey("complaints.complaint_id"),
+        nullable=True
     )
 
     notification_type = Column(
         Enum(
-            'SYSTEM',
-            'EMAIL',
-            'ESCALATION',
-            'CRITICAL',
-            'RESOLUTION',
-            'VERIFICATION',
-            'REMINDER',
+            "COMPLAINT_SUBMITTED",
+            "COMPLAINT_ASSIGNED",
+            "STATUS_UPDATED",
+            "COMPLAINT_ESCALATED",
+            "COMPLAINT_RESOLVED",
+            "COMPLAINT_REOPENED",
+            "COMPLAINT_CLOSED",
+            "SYSTEM",
+            "REMINDER",
             name="notification_types"
         ),
         nullable=False
@@ -60,7 +63,8 @@ class Notification(Base):
 
     is_read = Column(
         Boolean,
-        default=False
+        default=False,
+        nullable=False
     )
 
     created_at = Column(
